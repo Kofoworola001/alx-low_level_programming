@@ -1,9 +1,10 @@
 #include <stdio.h>
 /**
  * main -Entry point 
- * Description: 'print alphabets lower and uppercase'
- * Return:always 0
+ * Description: 'print the alphabets lower and uppercase,followed by a new line '
+ * Return:always 0 on success
  */
+
 int main(void)
 {
 	int n = 97;
