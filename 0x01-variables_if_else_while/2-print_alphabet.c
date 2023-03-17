@@ -1,21 +1,18 @@
 #include <stdio.h>
 
 /**
- * main -Entry point
- *
- * Return: Alaways 0 on success
+ * main - Entry point
+ * Description: prints a-z
+ * Return: 0
  */
-
 int main(void)
 {
-	int i = 97;
-
-	while (i <= 122)
-	{
-		putchar((char)i);
-	i++;
-	putchar('\n');
-	}
-	return (0);
+int i = 97;
+while (i <= 122)
+{
+putchar((char) i);
+i++;
 }
-
+putchar((char)'\n');
+return (0);
+}
