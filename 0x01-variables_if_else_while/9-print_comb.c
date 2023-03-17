@@ -1,24 +1,24 @@
-)  245 Bytes
 #include <stdio.h>
 
 /**
- * main - Entry point
- * Description: prints a-z
- * Return: 0
+ * main - prints all possible combinations of single digit numbers
+ *
+ * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-int i = 48;
-while (i <= 57)
-{
-putchar((char)i);
-if (!(i >= 57))
-{
-putchar(',');
-putchar(' ');
-}
-i++;
-}
-putchar((char)'\n');
-return (0);
+	int n;
+
+	for (n = 0 ; n < 10 ; n++)
+	{
+		putchar(n + '0');
+		if (n < 9)
+		{
+			putchar(',');
+			putchar(32);
+		}
+	}
+	putchar('\n');
+	return (0);
 }
