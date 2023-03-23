@@ -1,47 +1,31 @@
-#include <stdio.h>
+#include "main.h"
+
 /**
- * main - entry point
+ * print_square - a function that prints a square, followed by a new line.
+ * @size: the size of the square
  *
  * Return: void
  */
 
-int main(void)
+void print_square(int size)
 {
+	int row;
+	int column;
 
-	int p = 100;
-	int i;
-
-	i = 1;
-	while (i <= p)
+	if (size <= 0)
 	{
-		if (i % 3 == 0 && i % 5 == 0)
-		{
-			printf("FizzBuzz ");
-		}
-
-		else if (i % 3 == 0)
-		{
-			printf("Fizz ");
-		}
-
-		else if (i % 5 == 0)
-		{
-			if (i < p)
-				printf("Buzz ");
-
-			else
-				printf("Buzz");
-		}
-
-		else
-		{
-			printf("%i ", i);
-		}
-
-		i++;
-
-
+		_putchar('\n');
 	}
-	printf("\n");
-	return (0);
+	else
+	{
+		for (row = 0; row < size; row++)
+		{
+			for (column = 0; column < size; column++)
+			{
+				_putchar('#');
+			}
+			_putchar('\n');
+		}
+	}
 }
+
