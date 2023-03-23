@@ -1,29 +1,21 @@
 #include "main.h"
-
 /**
- * print_number - function declaration
- * @n: the integer
- * Description: prints the arguement n
- * Return: void
+ * print_number - prints an integer
+ * @n:.input integer parameter
  */
 
 void print_number(int n)
 {
-	unsigned int number;
+	unsigned int i = n;
 
 	if (n < 0)
 	{
-		number = -n;
-		_putchar('-');
+		_putchar(45);
+		i = -i;
 	}
-	else
+	if (i / 10)
 	{
-		number = n;
+		print_number(i / 10);
 	}
-
-	if (number / 10)
-	{
-		print_number(number / 10);
-	}
-	_putchar((number % 10) + '0');
+	_putchar(i % 10 + '0');
 }
