@@ -1,19 +1,19 @@
 #include "main.h"
+
 /**
- * _puts - output a string
- * @c: pointer parameter a
- * Description: length  pointer value
- * Return: integer
+ * _puts - prints a string to stdout
+ * @str: string pointer
+ *
+ * Return: void
  */
 
-void _puts(char *c)
+void _puts(char *str)
 {
+	int i;
 
-	int i = 0;
-
-for (; c[i] != '\0'; i++)
-{
-_putchar(c[i]);
-}
-_putchar('\n');
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
 }
