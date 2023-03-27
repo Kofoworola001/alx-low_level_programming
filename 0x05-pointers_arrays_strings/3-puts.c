@@ -1,16 +1,19 @@
 #include "main.h"
 /**
- * _strlen - return the length of a string
- * @s: char to check
- * Description: this will return the length of a string
- * Return: 0 is success
+ * _puts - output a string
+ * @c: pointer parameter a
+ * Description: length  pointer value
+ * Return: integer
  */
-int _strlen(char *s)
+
+void _puts(char *c)
 {
-	int a = 0;
 
-	for (; *s++;)
-		a++;
-	return (a);
+	int i = 0;
+
+for (; c[i] != '\0'; i++)
+{
+_putchar(c[i]);
 }
-
+_putchar('\n');
+}
