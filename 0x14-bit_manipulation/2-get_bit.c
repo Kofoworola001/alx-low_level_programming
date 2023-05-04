@@ -1,11 +1,13 @@
 #include "main.h"
 /**
- * print_binary - prints the binary representation of a number
- * @n: unsigned long, number to be represented in binary
+ * get_bit - returns the value of a bit at a given index
+ * @n: unsigned long int to search
+ * @index: index to return
+ * Return: the value of the bit at index or -1 if error
  */
-void print_binary(unsigned long int n)
+int get_bit(unsigned long int n, unsigned int index)
 {
-	if (n > 1)
-		print_binary(n >> 1);
-	(n & 1) ? _putchar('1') : _putchar('0');
+	if (index > 53)
+		return (-1);
+	return ((n >> index) & 1);
 }
